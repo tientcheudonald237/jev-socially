@@ -6,7 +6,12 @@ import WhoToFollow from "@/components/WhoToFollow";
 import { currentUser } from "@clerk/nextjs/server";
 
 export default async function Home() {
-  const user = await currentUser();
+  let user = null;
+  try {
+    user = await currentUser();
+  } catch (error) {
+    console.error("Failed to fetch current user:", error);
+  }
   const posts = await getPosts();
   const dbUserId = await getDbUserId();
 

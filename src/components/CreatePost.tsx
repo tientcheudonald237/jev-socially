@@ -76,7 +76,7 @@ function CreatePost() {
                                 type="button"
                                 variant="ghost"
                                 size="sm"
-                                className="text-muted-foreground hover:text-primary"
+                                className="text-easternBlue hover:text-scooter hover:bg-botticelli/20"
                                 onClick={() => setShowImageUpload(!showImageUpload)}
                                 disabled={isPosting}
                             >
@@ -85,7 +85,7 @@ function CreatePost() {
                             </Button>
                         </div>
                         <Button
-                            className="flex items-center"
+                            className="bg-orange hover:bg-orange/90 text-white"
                             onClick={handleSubmit}
                             disabled={(!content.trim() && !imageUrl) || isPosting}
                         >

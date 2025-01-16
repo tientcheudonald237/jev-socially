@@ -50,7 +50,19 @@ const config: Config = withUt({
 					'3': 'hsl(var(--chart-3))',
 					'4': 'hsl(var(--chart-4))',
 					'5': 'hsl(var(--chart-5))'
-				}
+				},
+
+				// New color definitions
+				orange: '#f96624',
+				easternBlue: '#21abb4',
+				botticelli: '#d3e9e8',
+				lima: '#61d518',
+				atoll: '#086c6b',
+				halfBaked: '#73c4c8',
+				scooter: '#26c4dc',
+				genoa: '#167d78',
+				fountainBlue: '#4bb0b3',
+				turquoiseBlue: '#53d4e4',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

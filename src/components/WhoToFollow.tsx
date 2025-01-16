@@ -28,7 +28,7 @@ async function WhoToFollow() {
                                     <Link href={`/profile/${user.username}`} className="font-medium cursor-pointer">
                                         {user.name}
                                     </Link>
-                                    <p className="text-muted-foreground">@{user.username}</p>
+                                    <p className="text-atoll">@{user.username}</p>
                                     <p className="text-muted-foreground">{user._count.followers} followers</p>
                                 </div>
                             </div>
