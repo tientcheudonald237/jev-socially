@@ -1,19 +1,12 @@
 import Link from "next/link";
-import Image from "next/image";
 import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
 import { currentUser } from "@clerk/nextjs/server";
 import { syncUser } from "@/actions/user.action";
+import Image from "next/image";
 
 async function Navbar() {
-    let user = null;
-    try {
-        user = await currentUser();
-        if (user) await syncUser();
-    } catch (error) {
-        console.error("Failed to fetch current user:", error);
-        // return;
-    }
+    const user = await currentUser();
     if (user) await syncUser();
     return (
         <nav className="sticky top-0 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50">
@@ -31,7 +24,7 @@ async function Navbar() {
                         </Link>
                     </div>
 
-                    {user && <DesktopNavbar username={user.username ?? ''} />}
+                    <DesktopNavbar />
                     <MobileNavbar />
                 </div>
             </div>
